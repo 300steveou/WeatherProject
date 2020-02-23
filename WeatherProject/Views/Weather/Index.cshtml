@@ -1,0 +1,75 @@
+﻿@model IEnumerable<WeatherProject.Models.ViewModels.WeatherReportViewModel>
+
+@{
+    ViewBag.Title = "天氣預報";
+    string todayDate = DateTime.Now.ToString("yyyy/MM/dd");
+}
+
+
+<h1>@(todayDate)的天氣預報36小時列表</h1>
+<br />
+<div>
+    <button id="btnSubmit" type="button">儲存</button>
+</div>
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Weather)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxTemperature)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MinTemperature)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RainRate)
+        </th>
+        <th>
+            時間區段
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weather)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxTemperature)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinTemperature)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RainRate)%
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)~@Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+        </tr>
+    }
+</table>
+
+
+<!--Modal-->
+<div class="modal fade" tabindex="-1" id="editModal" role="dialog" aria-hidden="true">
+</div>
+
+<script>
+
+</script>

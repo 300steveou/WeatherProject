@@ -1,0 +1,53 @@
+﻿@model IEnumerable<WeatherProject.Models.ViewModels.WeatherReportViewModel>
+
+@{
+    Layout = "~/Views/Shared/_Empty.cshtml";
+}
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" style="text-align:center">行事曆檔案匯入</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <table class="table table-bordered middle straight-table">
+                <caption class="blue"></caption>
+                <tbody>
+                    <tr>
+                        <th>行事曆年月</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>上傳檔案</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>下載起始日</th>
+                        <td>
+                            <label class="form-calendar">
+                                <span class="icon icon-calendar-xs"></span>
+
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>下載結束日</th>
+                        <td>
+                            <label class="form-calendar">
+                                <span class="icon icon-calendar-xs"></span>
+
+                            </label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="center">
+                <button class="btn btn-primary" type="button" id="edit-sumbit">確認</button>
+                <button class="btn btn-default" type="button" data-dismiss="modal">關閉</button>
+            </div>
+        </div>
+    </div>
+</div>
